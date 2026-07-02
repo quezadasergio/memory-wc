@@ -1,0 +1,38 @@
+@if (gameState() === 'start') {
+  <div class="home-container">
+    <div class="top-half">
+      <div class="content-wrapper">
+        <h1 class="app-title">Memory World Cup</h1>
+        <p class="app-description">
+          A memory game where you have to match the pairs of photos of the 2026 World Cup players. Test your memory and find all the matching football cards!
+        </p>
+      </div>
+    </div>
+    
+    <div class="bottom-half">
+      <div class="button-wrapper">
+        <button class="play-button" (click)="startGame()">
+          <span>Start Playing</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="play-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+          </svg>
+        </button>
+      </div>
+      
+      <footer class="footer">
+        <p class="footer-text">
+          Application created by 
+          <a href="https://github.com/quezadasergio" target="_blank" rel="noopener noreferrer" class="footer-link">quezadasergio</a>
+        </p>
+      </footer>
+    </div>
+  </div>
+} @else if (gameState() === 'playing') {
+  <div class="game-container">
+    <h2>Game Board</h2>
+    <p>World Cup 2026 Player Cards will appear here.</p>
+    <button (click)="gameState.set('start')">Back to Home</button>
+  </div>
+}
+
+<router-outlet />

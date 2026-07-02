@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Circle Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%" fx="30%" fy="30%">
+      <stop offset="0%" stop-color="#7662E8" />
+      <stop offset="70%" stop-color="#37226C" />
+      <stop offset="100%" stop-color="#0a0618" />
+    </radialGradient>
+    
+    <!-- Neon Highlights -->
+    <linearGradient id="neonBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4788BE" />
+      <stop offset="100%" stop-color="#4811E6" />
+    </linearGradient>
+    
+    <linearGradient id="neonPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7662E8" />
+      <stop offset="100%" stop-color="#7548C2" />
+    </linearGradient>
+
+    <linearGradient id="whiteGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e2dff5" />
+    </linearGradient>
+  </defs>
+
+  <!-- Base outer glow -->
+  <circle cx="256" cy="256" r="240" fill="url(#bgGrad)" />
+  <circle cx="256" cy="256" r="235" fill="none" stroke="url(#neonBlue)" stroke-width="6" opacity="0.8" />
+
+  <!-- Soccer Ball Panels - FIFA 2026 Vibe with geometric curves -->
+  <g>
+    <!-- Central stylized pentagon -->
+    <polygon points="256,190 315,233 292,302 220,302 197,233" fill="url(#whiteGrad)" />
+    
+    <!-- Outer pentagons and hexagons panels using curves to give a 3D spherical look -->
+    <!-- Top panel -->
+    <path d="M 256 190 L 256 70 A 180 180 0 0 1 345 92 L 315 233 Z" fill="url(#neonPurple)" opacity="0.85" />
+    <path d="M 256 190 L 256 70 A 180 180 0 0 0 167 92 L 197 233 Z" fill="url(#neonBlue)" opacity="0.85" />
+    
+    <!-- Right side panels -->
+    <path d="M 315 233 L 425 190 A 180 180 0 0 1 432 290 L 292 302 Z" fill="url(#neonBlue)" opacity="0.9" />
+    <path d="M 292 302 L 362 400 A 180 180 0 0 1 256 442 L 256 442 L 256 370 Z" fill="url(#neonPurple)" opacity="0.9" />
+    
+    <!-- Left side panels -->
+    <path d="M 197 233 L 87 190 A 180 180 0 0 0 80 290 L 220 302 Z" fill="url(#neonPurple)" opacity="0.9" />
+    <path d="M 220 302 L 150 400 A 180 180 0 0 0 256 442 L 256 370 Z" fill="url(#neonBlue)" opacity="0.9" />
+    
+    <!-- Soccer ball seams (crisp black/purple boundaries) -->
+    <g fill="none" stroke="#0a0618" stroke-width="8" stroke-linejoin="round" stroke-linecap="round">
+      <polygon points="256,190 315,233 292,302 220,302 197,233" />
+      <line x1="256" y1="190" x2="256" y2="70" />
+      <line x1="315" y1="233" x2="425" y2="190" />
+      <line x1="292" y1="302" x2="362" y2="400" />
+      <line x1="220" y1="302" x2="150" y2="400" />
+      <line x1="197" y1="233" x2="87" y2="190" />
+      
+      <!-- Outer perimeter of the ball -->
+      <circle cx="256" cy="256" r="186" stroke="#0a0618" stroke-width="8" />
+    </g>
+  </g>
+
+  <!-- World Cup 2026 dynamic swooshes (overlapping translucent elements) -->
+  <path d="M 90 256 Q 256 100 422 256" fill="none" stroke="#ffffff" stroke-width="12" opacity="0.25" stroke-linecap="round" />
+  <path d="M 90 256 Q 256 412 422 256" fill="none" stroke="#4788BE" stroke-width="12" opacity="0.3" stroke-linecap="round" />
+  <path d="M 130 180 Q 256 320 382 180" fill="none" stroke="#7662E8" stroke-width="10" opacity="0.3" stroke-linecap="round" />
+</svg>
